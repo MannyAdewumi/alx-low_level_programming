@@ -12,7 +12,7 @@ int main(void)
 	float f;
 	long int a;
 	long long int b;
-	
+
 	printf("Size of an int:%lu byte(s)\n", (unsigned long)sizeof(i));
 	printf("size of a char:%lu byte(s)\n", (unsigned long)sizeof(c));
 	printf("size of a float:%lu byte(s)\n", (unsigned long)sizeof(f));
