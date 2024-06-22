@@ -4,8 +4,8 @@
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- * main- main function
- * return: 0 when successful
+ * main - main function to print positive value
+ * Return: 0 when successful
  */
 
 int main(void)
