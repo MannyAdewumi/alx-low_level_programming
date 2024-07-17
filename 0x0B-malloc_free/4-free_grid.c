@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *free_grid -
+ *free_grid - function parameter
  *@grid:pointer to array
  *@height:pointer to row
  *Return: pointer to return
