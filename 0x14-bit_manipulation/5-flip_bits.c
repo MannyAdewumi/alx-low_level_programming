@@ -20,5 +20,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		if (prev & 1)
 			r++;
 	}
-	return (rounder);
+	return (r);
 }
