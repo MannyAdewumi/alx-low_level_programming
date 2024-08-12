@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	bufr = create_buffer(argv[2]);
+	bufr = create_bufr(argv[2]);
 	frm = open(argv[1], O_RDONLY);
 	r = read(frm, bufr, 1024);
 	toh = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 		}
 
 		r = read(frm, bufr, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
+		toh = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (r > 0);
 
