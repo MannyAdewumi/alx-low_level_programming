@@ -1,7 +1,7 @@
 #include "main.h"
 
 char *create_buffer(char *file);
-void close_file(int fd);
+void close_file(int d);
 
 /**
  * creates_buffer - Allocates 1024 bytes for a buffer.
@@ -17,8 +17,7 @@ char *creates_buffer(char *file)
 
 	if (bufr == NULL)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -29,15 +28,15 @@ char *creates_buffer(char *file)
  * close_file - Closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
-void close_file(int fd)
+void close_file(int d)
 {
 	int c;
 
-	c = close(fd);
+	c = close(d);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", d);
 		exit(100);
 	}
 }
@@ -73,8 +72,7 @@ int main(int argc, char *argv[])
 	do {
 		if (frm == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
 			free(bufr);
 			exit(98);
 		}
@@ -82,8 +80,7 @@ int main(int argc, char *argv[])
 		w = write(toh, bufr, r);
 		if (toh == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
 			free(bufr);
 			exit(99);
 		}
